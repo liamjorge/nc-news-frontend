@@ -1,6 +1,6 @@
 const Filter = () => {
     return (
-        <p>This is the filter</p>
+        <p>Filter options will go here...</p>
     )
 }
 

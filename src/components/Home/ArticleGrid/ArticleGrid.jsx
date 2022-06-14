@@ -1,6 +1,6 @@
-import ArticleCard from "./ArticleCard"
+import ArticleCard from "./ArticleCard/ArticleCard"
 import { useState, useEffect } from "react"
-import { fetchArticles } from '../../../utils/api.js'
+import fetchArticles from '../../../utils/api.js'
 
 const ArticleGrid = () => {
     const [articles, setArticles] = useState([])

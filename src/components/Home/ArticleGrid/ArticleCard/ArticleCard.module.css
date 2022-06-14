@@ -1,0 +1,80 @@
+.article-card {
+  padding: 0.9rem;
+  margin: 0.9rem 0;
+  border: rgb(221, 221, 221) 1px solid;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  display: grid;
+  gap: .8rem;
+  grid-auto-columns: 0.1fr 0.6fr 0.2fr 0.1fr;
+  grid-template-areas:
+    'logo author votes emoji'
+    'logo title votes emoji'
+    'logo topic votes posted-on';
+}
+
+.article-card__logo {
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 2px solid rgb(217, 218, 219);
+}
+
+.article-card__topic {
+  grid-area: topic;
+  justify-self: start;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  background-color: hsl(180, 31%, 95%);
+  font-weight: 500;
+  font-size: 0.8rem;
+
+}
+
+.article-card__title {
+  grid-area: title;
+  justify-self: start;
+  text-align: left;
+
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+
+.article-card__author {
+  grid-area: author;
+  justify-self: start;
+}
+
+.article-card__votes {
+  grid-area: votes;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.article-card__stats {
+  margin: 0.2rem;
+}
+
+
+.article-card__posted-on {
+  grid-area: posted-on;
+  justify-self: end;
+  align-self: end
+}
+
+.article-card__emoji {
+  grid-area: emoji;
+  justify-self: end;
+  align-self: start;
+}
