@@ -1,5 +1,6 @@
 import styles from "./ArticleDetails.module.css";
 import { useArticleDetails} from "../../../../hooks/useArticleDetails"
+import LoadingSpinner from "../../../Shared/LoadingSpinner"
 
 const ArticleDetails = (props) => {
     const {articleId, handleOnClick} = props;
@@ -7,9 +8,9 @@ const ArticleDetails = (props) => {
 
     return (
         <div className={styles['article-details']} onClick={() => handleOnClick()}>
-            {!isLoading
-                ? <p>{articleDetails.body}</p>
-                : <p>Loading...</p>
+            {isLoading
+                ? <LoadingSpinner />
+                : <p>{articleDetails.body}</p>
             }
         </div>
     )
