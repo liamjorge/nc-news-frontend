@@ -6,7 +6,6 @@ import ArticleDetails from "./ArticleDetails";
 const ArticleCard = (props) => {
     const {articleInfo} = props;
     const [viewArticleDetails, setViewArticleDetails] = useState(false)
-
     const handleOnClick = () => {setViewArticleDetails(viewArticleDetails => !viewArticleDetails)}
 
     return (
@@ -33,7 +32,7 @@ const ArticleCard = (props) => {
                     }
                 </div>
             </article>
-            {viewArticleDetails ? <ArticleDetails articleInfo={articleInfo} handleOnClick={handleOnClick}/>: null}
+            {viewArticleDetails ? <ArticleDetails articleId={articleInfo.article_id} handleOnClick={handleOnClick}/>: null}
         </>
         
     )

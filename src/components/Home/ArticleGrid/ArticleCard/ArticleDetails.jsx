@@ -1,10 +1,16 @@
 import styles from "./ArticleDetails.module.css";
+import { useArticleDetails} from "../../../../hooks/useArticleDetails"
 
 const ArticleDetails = (props) => {
-    const {articleInfo, handleOnClick} = props;
+    const {articleId, handleOnClick} = props;
+    const {articleDetails, isLoading } = useArticleDetails(articleId)
+
     return (
         <div className={styles['article-details']} onClick={() => handleOnClick()}>
-            <p>More details on this article ({articleInfo.title}) will go here</p>
+            {!isLoading
+                ? <p>{articleDetails.body}</p>
+                : <p>Loading...</p>
+            }
         </div>
     )
 }

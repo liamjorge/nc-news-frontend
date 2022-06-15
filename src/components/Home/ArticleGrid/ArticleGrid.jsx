@@ -1,17 +1,8 @@
 import ArticleCard from "./ArticleCard/ArticleCard"
-import { useState, useEffect } from "react"
-import fetchArticles from '../../../utils/api'
+import { useArticles } from "../../../hooks/useArticles"
 
 const ArticleGrid = () => {
-    const [articles, setArticles] = useState([])
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        fetchArticles().then((articlesFromApi) => {
-            setArticles(articlesFromApi);
-            setIsLoading(false);
-        });
-        }, []);
+    const {articles, isLoading } = useArticles()
 
     if (isLoading) return <p>Loading...</p>
     return (
