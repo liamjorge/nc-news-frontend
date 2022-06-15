@@ -2,8 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./Header/Header"
 import Home from "./Home/Home"
-import Topics from "./Topics/Topics"
-import Login from "./Login/Login"
+import SingleArticle from "./SingleArticle/SingleArticle"
 import Footer from "./Footer/Footer"
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
       <Header/>
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/topics" element={<Topics />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/articles/:articleId" element={<SingleArticle />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

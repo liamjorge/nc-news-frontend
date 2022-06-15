@@ -10,7 +10,7 @@ const ArticleGrid = () => {
             {errorMessage && <p><i className="bi bi-exclamation-triangle icon"></i> {errorMessage}</p>}
             {isLoading
                 ? <LoadingSpinner />
-                : articles.map(article => <ArticleCard articleInfo={article} key={article.article_id}/>)
+                : articles.map(article => <ArticleCard articleInfo={article} expanded={false} key={article.article_id} />)
             }
         </section>
     )

@@ -4,8 +4,8 @@ import { useState } from "react";
 import ArticleDetails from "./ArticleDetails";
 
 const ArticleCard = (props) => {
-    const {articleInfo} = props;
-    const [viewArticleDetails, setViewArticleDetails] = useState(false)
+    const {articleInfo, expanded} = props;
+    const [viewArticleDetails, setViewArticleDetails] = useState(expanded)
     const handleOnClick = () => {setViewArticleDetails(viewArticleDetails => !viewArticleDetails)}
 
     return (

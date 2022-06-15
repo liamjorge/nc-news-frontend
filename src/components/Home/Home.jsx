@@ -1,5 +1,5 @@
-import Filter from "./Filter"
-import ArticleGrid from "./ArticleGrid/ArticleGrid"
+import Filter from "../Shared/Filter"
+import ArticleGrid from "../Shared/ArticleGrid/ArticleGrid"
 
 const Home = () => {
     return (
