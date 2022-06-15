@@ -1,0 +1,11 @@
+.article-details {
+    padding: 0.9rem;
+    margin-bottom: 0.9rem;
+    
+    border: rgb(221, 221, 221) 1px solid;
+    border-radius: 0 0 1rem 1rem;
+    border-top-style:none;
+    
+    background-color: #ffffff;
+    cursor: pointer;
+  }
