@@ -1,5 +1,10 @@
+import "./App.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header, Footer, Home, Topics, Login } from "./"
+import Header from "./Header/Header"
+import Home from "./Home/Home"
+import Topics from "./Topics/Topics"
+import Login from "./Login/Login"
+import Footer from "./Footer/Footer"
 
 function App() {
   return (

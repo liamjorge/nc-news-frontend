@@ -1,8 +1,8 @@
 const Topics = () => {
     return (
-        <section>
+        <main>
             <p>This is the topics section</p>
-        </section>
+        </main>
     )
 }
 
