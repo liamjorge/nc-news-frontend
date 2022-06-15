@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { fetchArticles } from "../utils/api";
 
-export const useArticles = () => {
+export const useArticles = (topic) => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
-    fetchArticles()
+    fetchArticles(topic)
       .then((articlesFromApi) => {
         setArticles(articlesFromApi);
         setIsLoading(false);
@@ -19,7 +19,7 @@ export const useArticles = () => {
         setIsLoading(false);
         setErrorMessage("Unable to fetch articles");
       });
-  }, []);
+  }, [topic]);
 
   return { articles, isLoading, errorMessage };
 };

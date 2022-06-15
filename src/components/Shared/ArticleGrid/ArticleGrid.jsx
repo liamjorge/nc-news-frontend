@@ -2,8 +2,9 @@ import ArticleCard from "./ArticleCard/ArticleCard"
 import { useArticles } from "../../../hooks/useArticles"
 import LoadingSpinner from "../../Shared/LoadingSpinner"
 
-const ArticleGrid = () => {
-    const {articles, isLoading, errorMessage } = useArticles()
+const ArticleGrid = (props) => {
+    const { topic } = props;
+    const {articles, isLoading, errorMessage } = useArticles(topic)
 
     return (
         <section>
