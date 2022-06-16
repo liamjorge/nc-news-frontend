@@ -3,11 +3,11 @@ import { useArticleDetails} from "../../../../hooks/useArticleDetails"
 import LoadingSpinner from "../../../Shared/LoadingSpinner"
 
 const ArticleDetails = (props) => {
-    const {articleId, handleOnClick} = props;
+    const {articleId, expanded, handleOnClick} = props;
     const {articleDetails, isLoading, errorMessage } = useArticleDetails(articleId)
 
     return (
-        <div className={styles['article-details']} onClick={() => handleOnClick()}>
+        <div className={`${styles['article-details']} ${!expanded ? 'clickable' : ''}`} onClick={() => expanded ? null : handleOnClick()}>
             {errorMessage && <p><i className="bi bi-exclamation-triangle icon"></i> {errorMessage}</p>}
             {isLoading
                 ? <LoadingSpinner />

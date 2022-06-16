@@ -10,7 +10,7 @@ const ArticleCard = (props) => {
 
     return (
         <>
-            <article className={`${styles['article-card']} ${viewArticleDetails ? styles['article-card--expanded'] : ''}`} onClick={() => handleOnClick()}>
+            <article className={`${styles['article-card']} ${viewArticleDetails ? styles['article-card--expanded'] : ''} ${!expanded ? 'clickable' : ''}`} onClick={() => expanded ? null : handleOnClick()}>
                 <img className={styles['article-card__logo']} src="https://picsum.photos/200/300" alt={`${articleInfo.author} logo`}/>
                 <p className={styles['article-card__author']}>{articleInfo.author}</p>
                 <h3 className={styles['article-card__title']}>{articleInfo.title}</h3>
@@ -32,7 +32,7 @@ const ArticleCard = (props) => {
                     }
                 </div>
             </article>
-            {viewArticleDetails ? <ArticleDetails articleId={articleInfo.article_id} handleOnClick={handleOnClick}/>: null}
+            {viewArticleDetails ? <ArticleDetails articleId={articleInfo.article_id} expanded={expanded} handleOnClick={handleOnClick}/>: null}
         </>
         
     )

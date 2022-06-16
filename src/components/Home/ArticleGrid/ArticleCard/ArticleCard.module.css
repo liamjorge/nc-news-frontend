@@ -4,7 +4,6 @@
   border: rgb(221, 221, 221) 1px solid;
   border-radius: 1rem;
   background-color: #ffffff;
-  cursor: pointer;
 
   display: grid;
   gap: .8rem;
@@ -73,7 +72,6 @@
   grid-area: posted-on;
   justify-self: end;
   align-self: end;
-  background-color: green
 }
 
 .article-card__emoji {
