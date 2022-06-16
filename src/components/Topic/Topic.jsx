@@ -1,13 +1,13 @@
-import Filter from "../Shared/Filter"
-import ArticleGrid from "../Shared/ArticleGrid/ArticleGrid"
+import Filter from "../Home/Filter"
+import ArticleGrid from "../Home/ArticleGrid/ArticleGrid"
 import { useParams } from "react-router-dom"
 
 const Topic = () => {
     const { topic } = useParams()
     return (
         <main>
+            <h2>All {topic} articles</h2>
             <Filter />
-            <p>View all articles related to {topic}</p>
             <ArticleGrid topic={topic}/>
         </main>
     )

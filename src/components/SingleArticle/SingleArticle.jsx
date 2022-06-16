@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useArticleDetails} from "../../hooks/useArticleDetails"
-import ArticleCard from "../Shared/ArticleGrid/ArticleCard/ArticleCard"
+import ArticleCard from "../Home/ArticleGrid/ArticleCard/ArticleCard"
 import LoadingSpinner from "../Shared/LoadingSpinner"
 
 const SingleArticle = () => {
