@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from "./Shared/Navbar";
 import Header from "./Header/Header"
 import Home from "./Home/Home"
 import Topic from "./Topic/Topic"
@@ -9,6 +10,7 @@ import Footer from "./Footer/Footer"
 function App() {
   return (
     <BrowserRouter>
+      <Navbar/>
       <Header/>
       <Routes>
           <Route path="/" element={<Home />} />
