@@ -3,3 +3,7 @@
 .icon {
     padding: 0.4rem;
 }
+
+.clickable {
+    cursor: pointer;
+}

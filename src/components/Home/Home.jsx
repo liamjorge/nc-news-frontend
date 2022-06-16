@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <main>
             <Filter />
-            <ArticleGrid />
+            <ArticleGrid topic="all"/>
         </main>
     )
 }
