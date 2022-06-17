@@ -3,8 +3,8 @@ import { useArticles } from "../../../hooks/useArticles"
 import LoadingSpinner from "../../Shared/LoadingSpinner"
 
 const ArticleGrid = (props) => {
-    const { topic } = props;
-    const {articles, isLoading, errorMessage } = useArticles(topic)
+    const { topic, sortBy  } = props;
+    const {articles, isLoading, errorMessage } = useArticles(topic, sortBy)
 
     return (
         <section>

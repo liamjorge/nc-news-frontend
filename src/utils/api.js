@@ -2,13 +2,10 @@ import axios from "axios";
 
 const baseURL = "https://liamjorge-nc-news.herokuapp.com/api";
 
-export const fetchArticles = (topic) => {
-  let topicQuery = "";
-  if (topic !== "all") {
-    topicQuery = `topic=${topic}`;
-  }
+export const fetchArticles = (topic, sortBy) => {
+  const params = { topic: topic, sort_by: sortBy };
   return axios
-    .get(`${baseURL}/articles?${topicQuery}`)
+    .get(`${baseURL}/articles`, { params })
     .then((response) => response.data.articles);
 };
 
