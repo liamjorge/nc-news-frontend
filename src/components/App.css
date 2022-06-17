@@ -1,9 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
-
-.icon {
-    padding: 0.4rem;
-}
-
 .clickable {
     cursor: pointer;
 }

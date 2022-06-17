@@ -17,12 +17,11 @@ const ArticleCard = (props) => {
                 <p className={styles['article-card__topic']}>{articleInfo.topic}</p>
                 <div className={styles['article-card__votes']}>
                     <p className={styles['article-card__stats']}>
-                        <i className="bi bi-arrow-up-circle icon"></i>
-                        {articleInfo.votes} votes
+                        🔼 {articleInfo.votes} votes
                     </p>
                     <p className={styles['article-card__stats']}>
-                        <i className="bi bi-chat-left-dots icon"></i>
-                        {articleInfo.comment_count} comments</p>
+                        💬 {articleInfo.comment_count} comments
+                    </p>
                 </div>
                 <p className={styles['article-card__posted-on']}>{timeSince(articleInfo.created_at)}</p>
                 <div className={styles['article-card__emoji']}>
