@@ -1,23 +1,20 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from "./Shared/Navbar";
-import Header from "./Header/Header"
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from "./Home/Home"
 import Topic from "./Topic/Topic"
 import SingleArticle from "./SingleArticle/SingleArticle"
-import Footer from "./Footer/Footer"
+import ErrorPage from "./Shared/ErrorPage"
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar/>
-      <Header/>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/topics/:topic" element={<Topic />} />
           <Route path="/articles/:articleId" element={<SingleArticle />} />
+          <Route path="/error" element={<ErrorPage />} /> 
+          <Route path="*" element={<Navigate to="/error" />} />
       </Routes>
-      <Footer/>
     </BrowserRouter>
   );
 }

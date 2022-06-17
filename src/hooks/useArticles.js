@@ -4,7 +4,7 @@ import { fetchArticles } from "../utils/api";
 export const useArticles = (topic, sortBy) => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     setIsLoading(true);
@@ -17,7 +17,7 @@ export const useArticles = (topic, sortBy) => {
       .catch(() => {
         setArticles([]);
         setIsLoading(false);
-        setErrorMessage("Unable to fetch articles");
+        setErrorMessage("No articles found!");
       });
   }, [topic, sortBy]);
 

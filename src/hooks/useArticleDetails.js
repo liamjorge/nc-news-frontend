@@ -4,7 +4,7 @@ import { fetchArticleDetails } from "../utils/api";
 export const useArticleDetails = (articleId) => {
   const [articleDetails, setArticleDetails] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     fetchArticleDetails(articleId)
@@ -16,7 +16,7 @@ export const useArticleDetails = (articleId) => {
       .catch(() => {
         setArticleDetails({});
         setIsLoading(false);
-        setErrorMessage("Unable to fetch article details");
+        setErrorMessage("This article wasn't found!");
       });
   }, [articleId]);
 
