@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
   padding:0;
@@ -8,7 +8,7 @@
 
 body {
   background-color: rgb(248, 249, 251);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: rgb(42, 39, 39);
   text-align: center;
   -webkit-font-smoothing: antialiased;
