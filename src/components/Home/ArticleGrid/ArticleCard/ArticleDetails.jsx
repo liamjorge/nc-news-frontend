@@ -3,6 +3,7 @@ import { useArticleDetails} from "../../../../hooks/useArticleDetails"
 import LoadingSpinner from "../../../Shared/LoadingSpinner"
 import { Link } from "react-router-dom";
 
+
 const ArticleDetails = (props) => {
     const {articleId, expanded, handleOnClick} = props;
     const {articleDetails, isLoading, errorMessage } = useArticleDetails(articleId)
@@ -24,7 +25,7 @@ const ArticleDetails = (props) => {
                                 View article page
                             </button>
                         </Link>
-                        {/* <p className={styles['article-cta__text']}>👉 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cu so!</p> */}
+                        <p className={styles['article-cta__text']}>👉 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cu so!</p>
                     </div>
                 </>
             }
